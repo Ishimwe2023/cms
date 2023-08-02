@@ -29,37 +29,7 @@
             </div>
             <div class="table">
                 <h2>sales reports</h2>
-                <table border="2">
-                    <tr>
-                        <td>id</td>
-                        <td>p_id</td>
-                        <td>c_id</td>
-                        <td>price</td>
-                        <tr>
-                        <td colspan="5" class="delete"><a href="delet sales.php"> <button type="reset" name="delete" class="delete">Delete all</button></a></td><tr>
-                    </tr>
-                    <?php
-
-                    //connection
-            $connect=mysqli_connect("localhost","root","","shop");
-            //query
-           $qu=mysqli_query($connect,"select * from sales");
-            //while
-            while($data=mysqli_fetch_array($qu)){
-                ?>
-                <tr>
-                        <td><?php echo $data['id']?></td>
-                        <td><?php echo $data['p_id']?></td>
-                        <td><?php echo $data['c_id']?></td>
-                        <td><?php echo $data['price']?></td>
-                        <td><a href="sales delete.php?id=<?php echo $data['id']?>"> <button class="btn">Delete</button></a></td>
-                       
-                    </tr>
-                <?php
-            }
-
-                    ?>
-                </table>
+                
             </div>
         </div>
     </div>
